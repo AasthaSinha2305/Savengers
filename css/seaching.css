@@ -38,3 +38,6 @@ table {
       width: 80%;
       margin: auto;
   }
+  table {
+    table-layout: fixed;
+  }

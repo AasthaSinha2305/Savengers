@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="../../css//seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?v=<?php echo time(); ?>"/>
+    <link href="../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    
 </head>
 
 <body>
@@ -28,3 +30,53 @@
 </body>
 </html>
 
+
+<?php
+
+$connection = mysqli_connect("localhost:3307","root","");
+$db = mysqli_select_db($connection, "testing");
+if(isset($_POST['search'])){
+    $id1 = $_POST['date'];
+    $query = "SELECT * FROM checking where DATECASE = '$id1'";
+    $query_run = mysqli_query($connection,$query);
+    ?>
+      <div class="container">
+        <table>
+        <tr>
+        <th>Date</th>
+        <th>Court No</th>
+        <th>Case Number</th>
+        <th>Judge Name</th>
+        <th>Respondent Advocate</th>
+        <th>Petetioner Advocate</th>
+        <th>Time</th>
+      </tr>
+        </table>
+        </div>
+ 
+        <?php
+    
+    while($row = mysqli_fetch_array($query_run)){
+                ?>
+        <div class="container">
+        <table>
+        <tbody>
+        <tr>
+        <th><?php echo $row['DATECASE'] ?></th>
+        <th><?php echo $row['CASENO'] ?></th>
+        <th><?php echo $row['JUDGENAME'] ?></th>
+        <th><?php echo $row['RESADV'] ?></th>
+        <th><?php echo $row['PETADV'] ?></th>
+        <th><?php echo $row['PETADV'] ?></th>
+        <th><?php echo $row['TIME'] ?></th>
+      </tr>
+        </tbody>
+        </table>
+        </div>
+        <?php
+             
+    }
+}
+
+
+?>
