@@ -13,16 +13,25 @@
     <center>
     <h3>Case Number Wise</h3>
         <form action="" method="POST">
+        <label>Date</label><br>
+        <select name="date" id="cars">
+            <option value="">None</option>
+            <option value="2021-01-04">2021-01-04</option>
+            <option value="2021-01-03">2021-01-03</option>
+            <option value="2021-01-02">2021-01-02</option>
+            <option value="2021-01-01">2021-01-01</option>
+        </select>
+        <br><br>
         <label>Case Nature</label><br>
         <select name="casetype" id="cars">
             <option value="">None</option>
-            <option value="CR. MISC">CR. MISC</option>
+            <option value="CR MISC">CR. MISC</option>
             <option value="CWJC">CWJC</option>
             <option value="CR REV">CR REV</option>
             <option value="CR APPEAL">CR APPEAL</option>
         </select>
         <br><br>
-        <label>Case Number</label><br>
+            <label>Case Number</label><br>
             <input name = "caseno" type="text " placeholder="serial number"/> <br>
             <label>Year</label><br>
             <input name = "year" type="text " placeholder="serial number"/> <br>
@@ -42,7 +51,8 @@ if(isset($_POST['search'])){
     $id1 = $_POST['date'];
     $id2 = $_POST['caseno'];
     $id3 = $_POST['year'];
-    $query = "SELECT * FROM checking where YEARREG = '$id3' AND DATECASE = '$id1' AND CASENO = '$id2'";
+    $id4 = $_POST['casetype'];
+    $query = "SELECT * FROM checking where YEARREG = '$id3' AND DATECASE = '$id1' AND CASENO = '$id2' AND CASETYPE = '$id4'";
     $query_run = mysqli_query($connection,$query);
     ?>
         <?php
@@ -91,11 +101,15 @@ if(isset($_POST['search'])){
                 <th>Petitioner AOR Number</th>
                 <th><?php echo $row['PETAOR'] ?></th>
             </tr>
+            <tr>
+                <th>Time</th>
+                <th><?php echo $row['TIME'] ?></th>
+            </tr>
             <br>
             
         </table>
         </div>
-                <?php
+        <?php
              
     }
 }
