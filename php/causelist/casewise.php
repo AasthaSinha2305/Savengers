@@ -14,12 +14,12 @@
     <h3>Case Number Wise</h3>
         <form action="" method="POST">
         <label>Case Nature</label><br>
-        <select name="date" id="cars">
+        <select name="casetype" id="cars">
             <option value="">None</option>
-            <option value="2021-01-04">2021-01-04</option>
-            <option value="2021-01-03">2021-01-03</option>
-            <option value="2021-01-02">2021-01-02</option>
-            <option value="2021-01-01">2021-01-01</option>
+            <option value="CR. MISC">CR. MISC</option>
+            <option value="CWJC">CWJC</option>
+            <option value="CR REV">CR REV</option>
+            <option value="CR APPEAL">CR APPEAL</option>
         </select>
         <br><br>
         <label>Case Number</label><br>

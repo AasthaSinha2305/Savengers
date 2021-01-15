@@ -11,9 +11,9 @@
 
 <body>
     <center>
-    <h3>Case Number Wise</h3>
+    <h3>Court Number Wise</h3>
         <form action="" method="POST">
-        <label>Case Nature</label> <br>
+        <label>Date</label> <br>
         <select name="date" id="cars">
             <option value="2021-01-01">2021-01-04</option>
             <option value="2021-01-01">2021-01-03</option>
