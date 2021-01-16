@@ -96,6 +96,7 @@
             <label>Year</label><br>
             <input name = "year" type="text " placeholder="serial number"/> <br>
             <button type="submit" name="search" value="Search">SEARCH</button>
+             <a href="causelist.html">Back</a>
             
         </form>
     </center>
