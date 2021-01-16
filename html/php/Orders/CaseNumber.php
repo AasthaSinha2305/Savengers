@@ -49,14 +49,13 @@
  
  
     #container{
-        position: absolute;
         top:0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
         width:600;
-        height: 300px;
+        height: 200px;
         text-align: center;
     }
 </style>
@@ -70,24 +69,18 @@
 <div class="border-box">
 <h2>Orders by Case Number</h2>
 <label for="Name" id="name">CASE TYPE:</label>
- <select name="name" id="name">
-    <option value="ADMIRALITY SUIT[ADM. SUIT]">ADMIRALITY SUIT[ADM. SUIT]</option>
-    <option value="CERTIFICATE APPEAL[CRT. APPEAL]">CERTIFICATE APPEAL[CRT. APPEAL]</option>
-    <option value="CIVIL MISCELLANEOUS JURISDICTION [C.Misc.]">CIVIL MISCELLANEOUS JURISDICTION [C.Misc.]</option>
-    <option value="CIVIL REFERENCE[C.REF.]">CIVIL REFERENCE[C.REF.]</option>
-    <option value="CIVIL REVIEW[C. REV.]">CIVIL REVIEW[C. REV.]</option>
-	<option value="CIVIL REVISION[C.R.]">CIVIL REVISION[C.R.]</option>
-	<option value="CIVIL WRIT[CWJC]">CIVIL WRIT[CWJC]</option>
-	<option value="COMMERCIAL APPEAL[COM. APP]">COMMERCIAL APPEAL[COM. APP]</option>
-	<option value="COMPANY APPEAL[COMP. APP]">COMPANY APPEAL[COMP. APP]</option>
-	<option value="COMPANY APPEAL (SJ)[COMP. APP.]">COMPANY APPEAL (SJ)[COMP. APP.]</option>
-	<option value="COMPANY APPEAL(DB)[COMP. APP.(DB)]">COMPANY APPEAL(DB)[COMP. APP.(DB)]</option>
-	 </select>
+<select name="judge" id="cars">
+            <option value="">The Chief justice</option>
+            <option value="aastha">Mr. Justice Aastha</option>
+            <option value="akash">Mr. Justice Aakash</option>
+            <option value="anand">Mr. Justice Anand</option>
+            <option value="arika">Mr. Justice Aarika</option>
+        </select>
   <br><br>
  <label for="number" id="number"> CASE NO.: </label>
-<input type="number"><br/>
+<input name="caseno" type="number"><br/>
 <label for="number" id="number"> YEAR: </label>
-<input type="number"><br/>
+<input name="year" type="number"><br/>
 
 <button type="submit" value="Search"  id="search" onClick="alert('YOU GOT YOUR DESIRED RESULT')">Search</button>
  
