@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    <style>
+<style>
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
@@ -22,7 +21,7 @@
     background-color: #e6e6fae8;
     }
      
-    input[type=text], input[type=date]{
+    input[type=number], input[type=number]{
     width:20%;
     padding:7px 10px;
     margin: 10px 0;
@@ -54,35 +53,27 @@
  
  
     #container{
-        position: absolute;
         top:0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
         width:600;
-        height: 300px;
+        height: 200px;
         text-align: center;
     }
 </style>
 </head>
-
 <body>
-    <div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
-</div> 
-    <center>
-    <h3>Case Number Wise</h3>
-        <form action="" method="POST">
-        <label>Date</label><br>
-        <select name="date" id="cars">
-            <option value="">None</option>
-            <option value="2021-01-04">2021-01-04</option>
-            <option value="2021-01-03">2021-01-03</option>
-            <option value="2021-01-02">2021-01-02</option>
-            <option value="2021-01-01">2021-01-01</option>
-        </select>
-        <br><br>
-        <label>Case Nature</label><br>
+<div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
+</div>  
+    <div id="container">
+<form action="" method="post" id="flogin">
+ 
+<div class="border-box">
+<h2>CASE STATUS BY A.O.R. NUMBER</h2>
+<label for="Name" id="name">NATURE OF CASE:</label>
+<label>Case Nature</label><br>
         <select name="casetype" id="cars">
             <option value="">None</option>
             <option value="CR MISC">CR. MISC</option>
@@ -90,30 +81,31 @@
             <option value="CR REV">CR REV</option>
             <option value="CR APPEAL">CR APPEAL</option>
         </select>
-        <br><br>
-            <label>Case Number</label><br>
-            <input name = "caseno" type="text " placeholder="serial number"/> <br>
-            <label>Year</label><br>
-            <input name = "year" type="text " placeholder="serial number"/> <br>
-            <button type="submit" name="search" value="Search">SEARCH</button>
-             <a href="causelist.html">Back</a>
-            
-        </form>
-    </center>
+  <br><br>
+ <label for="number" id="number"> A.O.R. NUMBER: </label>
+<input name = "aornum" type="number"><br/>
+<label for="number" id="number"> YEAR OF TOKEN: </label>
+<input name="year" type="number"><br/>
+
+<button name= "search" type="submit" value="Search"  id="search">Search</button>
+ 
+</div>
+ 
+</form>
+</div>
 </body>
 </html>
 
 
-
 <?php
 
-$connection = mysqli_connect("sql113.epizy.com","epiz_27697848","KXpHLZ7gObGt1","epiz_27697848_causelist");
+$connection = mysqli_connect("localhost:3307", "root", "");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['casetype'];
-    $id2 = $_POST['caseno'];
+    $id2 = $_POST['aornum'];
     $id3 = $_POST['year'];
-    $query = "SELECT * FROM orders where CASETYPE = '$id1' AND CASENO = '$id2' AND YEARREG = '$id3'";
+    $query = "SELECT * FROM orders where CASETYPE = '$id1' AND PETAOR = '$id2' AND YEARREG = '$id3'";
     $query_run = mysqli_query($connection,$query);
     ?>
         <?php
@@ -157,6 +149,10 @@ if(isset($_POST['search'])){
             <tr>
                 <th>order pdf</th>
                 <th><a href="<?php echo $row['PDF'] ?>">pdf</a></th>
+            </tr>
+            <tr>
+                <th>case status</th>
+                <th><?php echo $row['STATUS'] ?></th>
             </tr>
             <br>
             

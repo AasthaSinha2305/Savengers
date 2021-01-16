@@ -87,7 +87,7 @@
 </html>
 
 <?php
-$connection = mysqli_connect("sql113.epizy.com","epiz_27697848","KXpHLZ7gObGt1","epiz_27697848_orders");
+$connection = mysqli_connect("localhost:3307", "root", "");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['petadv'];
