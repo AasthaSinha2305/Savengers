@@ -59,6 +59,8 @@
 </head>
 
 <body>
+    <div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
+</div> 
     <center>
     <h3>Court Number Wise</h3>
         <form action="" method="POST">
