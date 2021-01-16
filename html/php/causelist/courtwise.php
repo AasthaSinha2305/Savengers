@@ -103,9 +103,15 @@ if(isset($_POST['search'])){
             
         </table>
         </div>
-                <?php
+        <?php
              
     }
+    ?>
+    <br><br>
+    <div class="text-center">
+        <button onclick="window.print();" class="">Print</button>
+    </div>
+    <?php
 }
 
 

@@ -76,6 +76,12 @@ if(isset($_POST['search'])){
         <?php
              
     }
+    ?>
+    <br><br>
+    <div class="text-center">
+        <button onclick="window.print();">Print</button>
+    </div>
+    <?php
 }
 
 
