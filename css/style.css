@@ -187,14 +187,14 @@ ul li:hover a{
   .sidenav a {font-size: 18px;}
 }
 .mySlides {display:none;}
-.changing{
+/* .changing{
     padding-left: 16px;
    margin-left: 180px;
    margin-right: 180px;
-}
+} */
   
   .main {
-    margin-left: 180px; /* Same as the width of the sidenav */
+     /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
@@ -205,7 +205,14 @@ ul li:hover a{
   }
   .mySlides {display:none;}
   .changing{
-      padding-left: 16px;
-     margin-left: 180px;
-     margin-right: 180px;
+     
+     margin-left: 10vw;
+     margin-right: 10vw;
+  }
+
+  .mySlides {
+      padding-right: 5vw;
+      padding-bottom: 5vw;
+      height: 30vw;
+      width: 60vw;
   }
