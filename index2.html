@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+Home
+</title>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+
+<link rel="stylesheet" href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity= 
+"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous" /> 
+  
+    <!-- Import jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity= 
+"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"> 
+    </script> 
+      
+    <!-- Import popper.js cdn -->
+    <script src= 
+"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity= 
+"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"> 
+    </script> 
+      
+    <!-- Import javascript cdn -->
+    <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity= 
+"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"> 
+    </script> 
+     
+<style>
+
+</style>
+</head>
+<body style="align-items: center;">
+  <div class="sidenav">
+    <header>CCMI</header>
+    <ul>
+      
+      <li> <a href="./html/causelistOptions.html"><i class="fas fa-stream"></i>Cause list</a></li>
+      <li><a href="./html/OrderSearchOptions.html"><i class="fas fa-stream"></i>Order List</a></li>
+      <li><a href="./html/case_status.html"><i class="fas fa-qrcode"></i>Case Status</a></li>
+      <li> <a href="#contact"><i class="fas fa-question-circle"></i>FAQs</a></li>
+    </ul>
+  </div>
+  <div>
+<div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
+<h1 style="color: 3f1f09">COURT CASE MANAGEMENT OF INDIA</h1></div>  
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#aboutus">About Us</a>
+  <a href="#efillingguide">E-Filling Guide</a>
+  <a href="#contactus">Contact Us</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+  
+ 
+
+<div style="margin-left: 20vw; align-items: center;">
+<div class="material">
+  <p>The Judiciary is a system of courts which interpret and apply the law. The role of the courts is to decide cases by determining the relevant facts and the relevant law, and applying the relevant facts to the relevant law. The Indian Judiciary administers a common law system in which customs, securities and legislation, all codify the law of the land. It has, in fact, inherited the legacy of the legal system established by the then colonial powers and the princely states since the mid-19th century, and has partly retained the characteristics of practices from the ancient[3] and medieval times</p>
+</div>
+
+
+
+<div class="main">
+  <h2></h2>
+ </div>
+ <div class="changing" style="max-width:1000px; margin-left:10vw;">
+  <img class="mySlides" src="https://nasvinet.org/wp-content/uploads/2014/09/Judgement-1024x531.jpg" >
+  <img class="mySlides" src="https://cdn.thewire.in/wp-content/uploads/2020/06/15182640/Screen-Shot-2020-06-15-at-6.26.26-PM-1063x600.png" >
+  <img class="mySlides" src="http://www.dailynews.lk/sites/default/files/news/2016/08/01/rejectedpolicerequest.jpg">
+</div>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+<footer style="height: 20vh;padding-left: 200px; background-color: #4d270d;">
+
+    <div class="container">
+      <br>
+      <h5 style="color: white;">Contact Us</h5>
+      <p style="color: wheat;">
+        Phone : +91 324342xxxx <br>
+        Address : New Delhi, India
+      </p>
+
+    </div>
+
+</footer>
+</div>
+</html>
