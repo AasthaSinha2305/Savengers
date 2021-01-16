@@ -8,6 +8,64 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="../../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <style>
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 50px 50px;
+  text-align: center;
+  }
+  body{
+    margin: 0px;
+    padding: 0px;
+    text-align:center;
+    width: 100%;
+    background-color: #e6e6fae8;
+    }
+     
+    input[type=text], input[type=date]{
+    width:20%;
+    padding:7px 10px;
+    margin: 10px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+     
+    button{
+    background-color:#4CAF50;
+    width: 10%;
+    padding: 9px 5px;
+    margin:10px 0px 0px 35px;
+    cursor:pointer;
+    border:none;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    }
+     
+    button:hover{
+    opacity:0.8;
+    }
+     
+    #un,#ps{
+    font-family:'Lato', sans-serif;
+    color: gray;
+    }
+ 
+ 
+    #container{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width:600;
+        height: 300px;
+        text-align: center;
+    }
+</style>
 </head>
 
 <body>
@@ -26,7 +84,8 @@
         <label>AOR Number</label><br>
             <input name = "aornum" type="text " placeholder="serial number"/> <br>
         <br><br>
-            <input type="submit" name="search" value="Search">
+            <button type="submit" name="search" value="Search">SEARCH</button>
+            <a href="causelist.html">Back</a>
         </form>
     </center>
 </body>
