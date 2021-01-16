@@ -1,7 +1,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../../../css/seaching.css?php echo time(); ?>" rel="stylesheet" type="text/css" />
 <title>Order List </title>
+
 <style>
 .header {
   overflow: hidden;
@@ -49,17 +51,17 @@
  
  
     #container{
-        position: absolute;
         top:0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
         width:600;
-        height: 300px;
+        height: 200px;
         text-align: center;
     }
 </style>
+
 </head>
 <body>
 <div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
@@ -69,9 +71,15 @@
  
 <div class="border-box">
 <h2>Search by Judge Name</h2>
-<label for="Name" id="name">JUDGE:</label>
-<input type="text"><br/>
- 
+<label>Judge Name</label><br>
+<select name="judge" id="cars">
+            <option value="">The Chief justice</option>
+            <option value="aastha">Mr. Justice Aastha</option>
+            <option value="akash">Mr. Justice Aakash</option>
+            <option value="anand">Mr. Justice Anand</option>
+            <option value="arika">Mr. Justice Aarika</option>
+        </select>
+<!--
 <label for="date" id="date"> FROM DATE: </label>
 <input type="date"><br/>
 
@@ -81,8 +89,9 @@
   <label for="all">ALL</label><br>
 <input type="radio"value="AFRorders">
   <label for="AFRorders">AFR ORDERS</label><br>
- 
-<button type="submit" value="Search"  id="search" onClick="alert('YOU GOT YOUR DESIRED RESULT')">Search</button>
+  -->
+  <br>
+<button name="search" type="submit" value="Search"  id="search">Search</button>
 </div>
  
 </form>
@@ -90,3 +99,69 @@
  
 </body>
 </html>
+
+
+
+
+<?php
+$connection = mysqli_connect("localhost:3307", "root", "");
+$db = mysqli_select_db($connection, "testing");
+if(isset($_POST['search'])){
+    $id1 = $_POST['judge'];
+
+    $query = "SELECT * FROM orders where JUDGENAME = '$id1'";
+    $query_run = mysqli_query($connection,$query);
+    ?>
+        <?php
+    
+    while($row = mysqli_fetch_array($query_run)){
+                ?>
+        <div class="container" style="width: 80%;">
+        <table>
+            <tr>
+                <th>case number</th>
+                <th><?php echo $row['CASENO'] ?></th>
+            </tr>
+            <tr>
+                <th>judge name</th>
+                <th><?php echo $row['JUDGENAME'] ?></th>
+            </tr>
+            <tr>
+                <th>case type</th>
+                <th><?php echo $row['CASETYPE'] ?></th>
+            </tr>
+            <tr>
+                <th>year</th>
+                <th><?php echo $row['YEARREG'] ?></th>
+            </tr>
+            <tr>
+                <th>petitioner name</th>
+                <th><?php echo $row['PETNAME'] ?></th>
+            </tr>
+            <tr>
+                <th>pet advocate</th>
+                <th><?php echo $row['PETADV'] ?></th>
+            </tr>
+            <tr>
+                <th>advocate aor</th>
+                <th><?php echo $row['PETAOR'] ?></th>
+            </tr>
+            <tr>
+                <th>order date</th>
+                <th><?php echo $row['ORDERDATE'] ?></th>
+            </tr>
+            <tr>
+                <th>order pdf</th>
+                <th><a href="<?php echo $row['PDF'] ?>">pdf</a></th>
+            </tr>
+            <br>
+            
+        </table>
+        </div>
+        <?php
+             
+    }
+}
+
+
+?>
