@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=1024">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?v=<?php echo time(); ?>"/>
-    <link href="../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     
 </head>
 
@@ -33,7 +33,7 @@
 
 <?php
 
-$connection = mysqli_connect("localhost:3307","root","");
+$connection = mysqli_connect("sql113.epizy.com","epiz_27697848","KXpHLZ7gObGt1","epiz_27697848_causelist");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['date'];

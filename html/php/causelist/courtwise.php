@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="../../css//seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -48,7 +48,7 @@
 
 <?php
 
-$connection = mysqli_connect("localhost:3307","root","");
+$connection = mysqli_connect("sql113.epizy.com","epiz_27697848","KXpHLZ7gObGt1","epiz_27697848_causelist");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['date'];

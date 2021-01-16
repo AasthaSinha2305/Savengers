@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="../../css//seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="../../../css/seaching.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <center>
-    <h3>Case Number Wise</h3>
+    <h3>AOR Wise</h3>
         <form action="" method="POST">
         <label>Date</label><br>
         <select name="date" id="cars">
@@ -22,19 +22,9 @@
             <option value="2021-01-01">2021-01-01</option>
         </select>
         <br><br>
-        <label>Case Nature</label><br>
-        <select name="casetype" id="cars">
-            <option value="">None</option>
-            <option value="CR MISC">CR. MISC</option>
-            <option value="CWJC">CWJC</option>
-            <option value="CR REV">CR REV</option>
-            <option value="CR APPEAL">CR APPEAL</option>
-        </select>
+        <label>AOR Number</label><br>
+            <input name = "aornum" type="text " placeholder="serial number"/> <br>
         <br><br>
-            <label>Case Number</label><br>
-            <input name = "caseno" type="text " placeholder="serial number"/> <br>
-            <label>Year</label><br>
-            <input name = "year" type="text " placeholder="serial number"/> <br>
             <input type="submit" name="search" value="Search">
         </form>
     </center>
@@ -42,17 +32,14 @@
 </html>
 
 
-
 <?php
 
-$connection = mysqli_connect("localhost:3307","root","");
+$connection = mysqli_connect("sql113.epizy.com","epiz_27697848","KXpHLZ7gObGt1","epiz_27697848_causelist");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['date'];
-    $id2 = $_POST['caseno'];
-    $id3 = $_POST['year'];
-    $id4 = $_POST['casetype'];
-    $query = "SELECT * FROM checking where YEARREG = '$id3' AND DATECASE = '$id1' AND CASENO = '$id2' AND CASETYPE = '$id4'";
+    $id2 = $_POST['aornum'];
+    $query = "SELECT * FROM checking where DATECASE = '$id1' AND (PETAOR = '$id2' OR RESAOR = '$id2')";
     $query_run = mysqli_query($connection,$query);
     ?>
         <?php
@@ -106,6 +93,7 @@ if(isset($_POST['search'])){
                 <th><?php echo $row['TIME'] ?></th>
             </tr>
             <br>
+            <br>
             
         </table>
         </div>
@@ -116,3 +104,4 @@ if(isset($_POST['search'])){
 
 
 ?>
+
