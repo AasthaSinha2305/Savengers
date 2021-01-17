@@ -33,9 +33,7 @@
      
     button{
     background-color:#4CAF50;
-    width: 10%;
     padding: 9px 5px;
-    margin:10px 0px 0px 35px;
     cursor:pointer;
     border:none;
     color:#ffffff;
@@ -53,17 +51,6 @@
     }
  
  
-    #container{
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width:600;
-        height: 300px;
-        text-align: center;
-    }
 </style>
 </head>
 

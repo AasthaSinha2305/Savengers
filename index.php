@@ -128,7 +128,7 @@ span.psw {
         
       <button name= "search" type="search">Login</button>
     </div>
-    <button onclick="location.href = 'homepage.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right">skip login</button>
+    <button onclick="location.href = 'index2.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right">skip login</button>
   </form>
 
   
@@ -152,7 +152,7 @@ while($row = mysqli_fetch_array($query_run)){
   if(mysqli_num_rows($query_run)==1){
     ?>
     <script>
-      location.assign("homepage.html");
+      location.assign("index2.html");
     </script>
     <?php
   }

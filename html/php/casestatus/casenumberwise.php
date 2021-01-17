@@ -29,9 +29,9 @@
      
     button{
     background-color:#4CAF50;
-    width: 10%;
+
     padding: 9px 5px;
-    margin:10px 0px 0px 35px;
+
     cursor:pointer;
     border:none;
     color:#ffffff;
@@ -49,16 +49,7 @@
     }
  
  
-    #container{
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width:600;
-        height: 200px;
-        text-align: center;
-    }
+
 </style>
 </head>
 <body>
@@ -68,7 +59,7 @@
 <form action="" method="post" id="flogin">
  
 <div class="border-box">
-<center>
+
     <h3>Case Number Wise</h3>
         <form action="" method="POST">
         <br><br>
@@ -78,7 +69,6 @@
             <input name = "year" type="text " placeholder="serial number"/> <br>
             <button type="submit" name="search" value="Search">SEARCH</button>
         </form>
-    </center>
 </div>
  
 </form>
