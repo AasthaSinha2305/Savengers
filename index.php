@@ -128,7 +128,10 @@ span.psw {
         
       <button name= "search" type="search">Login</button>
     </div>
+    <button onclick="location.href = 'homepage.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right">skip login</button>
   </form>
+
+  
 </body>
 </html>
 
