@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 17, 2021 at 03:43 AM
+-- Generation Time: Jan 17, 2021 at 11:03 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -48,16 +48,16 @@ CREATE TABLE `checking` (
 --
 
 INSERT INTO `checking` (`SRNO`, `DATECASE`, `COURTNO`, `CASENO`, `JUDGENAME`, `PARTYNAME`, `RESADV`, `RESAOR`, `PETADV`, `PETAOR`, `CASETYPE`, `YEARREG`, `TIME`) VALUES
-(1, '2021-01-01', 1, 1, 'sima', 'london', 'b', 1, 'c', 2, 'CR MISC', 2020, '10:29:00.000'),
-(2, '2021-01-01', 1, 3, 'rima', 'bihar', 'e', 3, 'f', 4, 'CWJC', 2021, '10:40:00.000'),
-(3, '2021-01-01', 1, 2, 'shivang', 'london', 'qqii', 666, 'ui', 977, 'CR MISC', 2020, '00:00:00.000'),
-(4, '2021-01-01', 1, 29, 'arika', 'britain', 'qoy', 688, 'you', 999, 'CR REV', 2020, '00:00:00.000'),
-(5, '2021-01-01', 1, 57, 'smitha', 'patna', 'sinha', 678, 'agarwal', 675, 'CR APPEAL', 2021, '00:00:00.000'),
-(6, '2021-01-01', 1, 5, 'aisha', 'patna', 'sinha', 678, 'agarwal', 675, 'CWJC', 2020, '00:00:00.000'),
-(7, '2021-01-02', 2, 100, 'sanjay', 'agra', 'qqui', 660, 'rina', 980, 'CR MISC', 2020, '00:00:00.000'),
-(8, '2021-01-02', 2, 101, 'anamika', 'hussle', 'arnav', 30, 'urmila', 555, 'CWJC', 2021, '00:00:00.000'),
-(9, '2021-01-02', 2, 102, 'anamika', 'deski', 'queen', 202, 'yuni', 997, 'CWJC', 2020, '00:00:00.000'),
-(10, '2021-01-02', 2, 103, 'aastha', 'bihar', 'beena', 90, 'tora', 78, 'CWJC', 2020, '00:00:00.000');
+(1, '2021-01-01', 1, 1, 'sima', 'london', 'binay', 1, 'sanki', 2, 'CR MISC', 2020, '10:29:00.000'),
+(2, '2021-01-01', 1, 3, 'rima', 'bihar', 'yash', 3, 'hira', 4, 'CWJC', 2021, '10:40:00.000'),
+(3, '2021-01-01', 1, 2, 'shivang', 'london', 'qqii', 666, 'ui', 977, 'CR MISC', 2020, '07:00:00.000'),
+(4, '2021-01-01', 1, 29, 'arika', 'britain', 'qoy', 688, 'you', 999, 'CR REV', 2020, '10:00:00.000'),
+(5, '2021-01-01', 1, 57, 'smitha', 'patna', 'sinha', 678, 'agarwal', 675, 'CR APPEAL', 2021, '14:00:00.000'),
+(6, '2021-01-01', 1, 5, 'aisha', 'patna', 'sinha', 678, 'agarwal', 675, 'CWJC', 2020, '14:15:00.000'),
+(7, '2021-01-02', 2, 100, 'sanjay', 'agra', 'qqui', 660, 'rina', 980, 'CR MISC', 2020, '09:05:00.000'),
+(8, '2021-01-02', 2, 101, 'anamika', 'hussle', 'arnav', 30, 'urmila', 555, 'CWJC', 2021, '14:07:00.000'),
+(9, '2021-01-02', 2, 102, 'anamika', 'deski', 'queen', 202, 'yuni', 997, 'CWJC', 2020, '11:00:00.000'),
+(10, '2021-01-02', 2, 103, 'aastha', 'bihar', 'beena', 90, 'tora', 78, 'CWJC', 2020, '17:00:00.000');
 
 --
 -- Indexes for dumped tables
