@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="background-color: #CD853F;">
-    <center>
-        <div style="margin-top: -10px; margin-left: -10px; margin-right: -10px; background-color:  #8B4513;" class="header"><img style="margin-top: 20px;" src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
-            <br>
-            <h1 style="color: rgb(5, 72, 99); font-size: 40px; font-family:'Times New Roman', Times, serif; text-shadow: 3px 3px 3px rgba(0,0,0,0.3);"><b>ORDER SEARCH OPTION</b></h1>
-            <hr style="background-color: rgb(204, 53, 53);">
-        </div>  
-        
-          <br>
-    <button onclick="location.href = 'php/orders/casenumber.php'"style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white;">Case Number Wise</button>
-    <button onclick="location.href = 'php/orders/judgename.php'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white;">Judge Name Wise</button>
-    <button onclick="location.href = 'php/orders/petitionername.php'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white;">Petitioner Name Wise</button>
-    <button onclick="location.href = 'php/orders/advocatewise.php'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white;">Advocate Name Wise</button>
-    <button onclick="location.href = 'php/orders/orderdate.php'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white;">Order Date</button>
+    <title>ORDER LIST</title>
+    <style>
     
+         body {
+                   background-image: url('https://www.wkms.org/sites/wkms/files/styles/medium/public/201711/justice_ikiryo_123rf_0.jpg');
+                   background-repeat: no-repeat;
+                   background-attachment: fixed; 
+                   background-size: 100% 100%;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #FFDEAD;
+  background-color: #2a1506;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #8B4513}
+
+.button:active {
+  background-color: #8B4513;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+    <center>
+    <div style="margin-top: -10px; margin-left: -10px; margin-right: -10px; background-color: #422a18 ;" class="header"><img style="margin-top: 20px;" src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
+        <br>
+        <h1 style="color: #CD853F; font-size: 40px; font-family:'Times New Roman', Times, serif; text-shadow: 3px 3px 3px rgba(0,0,0,0.3);"><b>ORDER LIST</b></h1>
+        <hr style="background-color: rgb(204, 53, 53);">
+    </div>  
+    
+      <br>
+    <button onclick="location.href = 'php/orders/casenumber.php'" style=" margin-right: 10px;height:50px; width: 500px; display: block;" class="button">Case Number Wise</button>
+    <button onclick="location.href = 'php/orders/judgename.php'" style=" margin-right: 10px;height:50px; width: 500px;display: block;" class="button">Judge Name Wise</button>
+    <button onclick="location.href = 'php/orders/petitionername.php'" style=" margin-right: 10px;height:50px; width: 500px;display: block;" class="button">Petitioner Name Wise</button>
+    <button onclick="location.href = 'php/orders/advocatewise.php'" style=" margin-right: 10px;height:50px; width: 500px;display: block;" class="button">Advocate Name Wise</button>
+    <button onclick="location.href = 'php/orders/orderdate.php'" style=" margin-right: 10px;height:50px; width: 500px;display: block;" class="button">Order Date Wise</button>
+ 
+</center>
 </body>
 </html>
