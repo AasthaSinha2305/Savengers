@@ -7,7 +7,14 @@
   
     <title>Document</title>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://www.wkms.org/sites/wkms/files/styles/medium/public/201711/justice_ikiryo_123rf_0.jpg');
+  background-color: #FFFFFF;
+        width: 400px;
+        height: 400px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -42,11 +49,7 @@ button:hover {
 }
 
 /* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
+
 
 
 .container {
@@ -61,16 +64,13 @@ span.psw {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+  padding-top: 100px;
   
 }
 
@@ -111,14 +111,19 @@ span.psw {
      width: 100%;
   }
 }
+label{
+  color:#FFFFFF;
+}
+h1{
+  color:white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 </style>
 </head>
 <body>
-<form class="modal-content animate" method="post" >
-    <div class="imgcontainer">
-      
-    </div>
-
+<form  method="post" >
+<h1>Court Easy Access</h1>
     <div class="container">
       <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
@@ -126,9 +131,9 @@ span.psw {
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button name= "search" type="search">Login</button>
+      <button name= "search" type="search"><b>LOGIN</b></button>
     </div>
-    <button onclick="location.href = 'index2.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right">skip login</button>
+    <button onclick="location.href = 'index2.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right"><b>SKIP LOGIN</b></button>
   </form>
 
   

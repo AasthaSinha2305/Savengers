@@ -74,7 +74,6 @@
             <input name = "aornum" type="text " placeholder="serial number"/> <br>
         <br><br>
             <button type="submit" name="search" value="Search">SEARCH</button>
-            <a href="causelist.html">Back</a>
         </form>
     </center>
 </body>

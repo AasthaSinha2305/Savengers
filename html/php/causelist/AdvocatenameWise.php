@@ -85,7 +85,6 @@
         <input name = "advname" type="text " placeholder="SERIAL NUMBER"/> <br>
         <br><br>
             <button type="submit" name="search" value="Search">Search</button>
-            <a href="causelist.html">Back</a>
         </form>
     </center>
 </body>
