@@ -6,5 +6,6 @@ sign_up_btn.addEventListener('click',()=>{
     containter.classList.add("sign-up-mode");
 });
 sign_in_btn.addEventListener('click',()=>{
-    containter.classList.add("sign-in-mode");
+    containter.classList.remove("sign-in-mode");
 });
+
