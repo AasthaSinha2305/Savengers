@@ -68,8 +68,6 @@
         <label>Date</label><br>
         <select name="date" id="cars">
             <option value="">None</option>
-            <option value="2021-01-04">2021-01-04</option>
-            <option value="2021-01-03">2021-01-03</option>
             <option value="2021-01-02">2021-01-02</option>
             <option value="2021-01-01">2021-01-01</option>
         </select>

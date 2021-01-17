@@ -148,6 +148,8 @@ if(isset($_POST['search'])){
                 <th><?php echo $row['STATUS'] ?></th>
             </tr>
             <br>
+            <br>
+            <br>
             
         </table>
         </div>

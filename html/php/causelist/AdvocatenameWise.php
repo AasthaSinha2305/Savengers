@@ -152,6 +152,8 @@ if(isset($_POST['search'])){
             </tr>
             <br>
             <br>
+            <br>
+            <br>
             
         </table>
         </div>

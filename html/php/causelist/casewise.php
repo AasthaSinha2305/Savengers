@@ -145,6 +145,8 @@ if(isset($_POST['search'])){
                 <th><a href="<?php echo $row['PDF'] ?>">pdf</a></th>
             </tr>
             <br>
+            <br>
+            <br>
             
         </table>
         </div>
