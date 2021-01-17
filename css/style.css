@@ -264,11 +264,11 @@ ul li:hover a{
   .sidenav a {font-size: 18px;}
 }
 .mySlides {display:none;}
-/* .changing{
-    padding-left: 16px;
-   margin-left: 180px;
-   margin-right: 180px;
-} */
+.changing{
+    padding-left: 9vw;
+   /* margin-left: 180px;
+   margin-right: 180px; */
+}
   
   .main {
      /* Same as the width of the sidenav */
