@@ -9,14 +9,7 @@
   
     <title>Document</title>
 <style>
-body {font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://www.wkms.org/sites/wkms/files/styles/medium/public/201711/justice_ikiryo_123rf_0.jpg');
-  background-color: #FFFFFF;
-        width: 400px;
-        height: 400px;
-        margin: 7em auto;
-        border-radius: 1.5em;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);}
+body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -51,7 +44,11 @@ button:hover {
 }
 
 /* Center the image and position the close button */
-
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
 
 
 .container {
@@ -66,13 +63,16 @@ span.psw {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 100px;
+  padding-top: 60px;
   
 }
 
@@ -113,64 +113,57 @@ span.psw {
      width: 100%;
   }
 }
-label{
-  color:#FFFFFF;
-}
-h1{
-  color:white;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 </style>
 </head>
 <body>
-<form  method="post" >
-<h1>Court Easy Access</h1>
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+          
+        <div class="forms-container">
+          <div class="signin-signup">
+            <form action="" class="sign-in-form">
+              <h2 class="title"> Sign in</h2>
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username">
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+              </div>
+              <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password">
+                
+              </div>
+              <input type="submit" value="Login" class="btn solid" >
+              <input type="submit" value="Login Using eMail" class="btn btn-email solid" >
+             
+            </form>
+
+          
+          </div>
+          
+        </div>
+        <div class="panels-container">
+          <div class="panel left-panel">
+            <div class="content">
+              <h3>New here ?</h3>
+              <p>djohfv ufhdivf ovfp fvhiushvsdufyh sfddviyugsd v dsiyugv sdoiv odigv</p>
+              <button class="btn transparent" href="homepage.html" >Skip</button>
+            </div>
+            <img src="img/undraw_certification_aif8.svg" class="image" alt="">
+          </div>
+          <div class="panel right-panel">
+            <div class="content">
+              <h3>Already have an account ?</h3>
+              <p>djohfv ufhdivf ovfp fvhiushvsdufyh sfddviyugsd v dsiyugv sdoiv odigv</p>
+              <button class="btn transparent" id="sign-in-btn">Sign in</button>
+            </div>
+            <img src="img/undraw_Login_re_4vu2.svg" class="image" alt="">
+          </div>
+
+        </div>
         
-      <button name= "search" type="search"><b>LOGIN</b></button>
-    </div>
-    <button onclick="location.href = 'index2.html'" style=" margin-right: 10px; background-color: rgb(189, 15, 15);  height:40px; color: white; width:200px; float:right"><b>SKIP LOGIN</b></button>
-  </form>
-
-  
+      </div>
+      
 </body>
-<script src="js/app.js"></script>
+
 </html>
 
-
-<?php
-
-$connection = mysqli_connect("localhost:3307", "root", "");
-$db = mysqli_select_db($connection, "testing");
-if(isset($_POST['search'])){
-  $id1 = $_POST['uname'];
-  $id2 = $_POST['psw'];
-  $query = "SELECT * FROM logindata where USERNAME = '$id1' AND PASWORD = '$id2'";
-  $query_run = mysqli_query($connection,$query);
-  ?>
-  <?php
-
-while($row = mysqli_fetch_array($query_run)){
-  if(mysqli_num_rows($query_run)==1){
-    ?>
-    <script>
-      location.assign("index2.html");
-    </script>
-    <?php
-  }
-  else{
-    echo "invalid input";
-  }
-       
-}
-
-  
-}
-
-?>
