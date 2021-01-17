@@ -108,41 +108,40 @@ if(isset($_POST['search'])){
                 ?>
         <div class="container" style="width: 80%;">
         <table>
-            <tr>
-                <th>case number</th>
+        <th>Case  Number</th>
                 <th><?php echo $row['CASENO'] ?></th>
             </tr>
             <tr>
-                <th>judge name</th>
+                <th>Date</th>
+                <th><?php echo $row['DATECASE'] ?></th>
+            </tr>
+            <tr>
+                <th>Court Number</th>
+                <th><?php echo $row['COURTNO'] ?></th>
+            </tr>
+            <tr>
+                <th>Judge Name</th>
                 <th><?php echo $row['JUDGENAME'] ?></th>
             </tr>
             <tr>
-                <th>case type</th>
-                <th><?php echo $row['CASETYPE'] ?></th>
+                <th>Party Number</th>
+                <th><?php echo $row['PARTYNAME'] ?></th>
             </tr>
             <tr>
-                <th>year</th>
-                <th><?php echo $row['YEARREG'] ?></th>
+                <th>Respondent Advocate</th>
+                <th><?php echo $row['RESADV'] ?></th>
             </tr>
             <tr>
-                <th>petitioner name</th>
-                <th><?php echo $row['PETNAME'] ?></th>
+                <th>Respondent AOR Number</th>
+                <th><?php echo $row['RESAOR'] ?></th>
             </tr>
             <tr>
-                <th>pet advocate</th>
+                <th>Petitioner Advocate</th>
                 <th><?php echo $row['PETADV'] ?></th>
             </tr>
             <tr>
-                <th>advocate aor</th>
+                <th>Petitioner AOR Number</th>
                 <th><?php echo $row['PETAOR'] ?></th>
-            </tr>
-            <tr>
-                <th>order date</th>
-                <th><?php echo $row['ORDER DATE'] ?></th>
-            </tr>
-            <tr>
-                <th>order pdf</th>
-                <th><a href="<?php echo $row['PDF'] ?>">pdf</a></th>
             </tr>
             <br>
             <br>
