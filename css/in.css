@@ -57,12 +57,14 @@ form{
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    transition: .2s .7s ease-in-out;
 }
 form.sign-in-form{
- z-index:4;
+ z-index:2;
+ opacity: 1;
 }
 form.sign-up-form{
-    z-index:3;
+    z-index:1;
     opacity: 0;
 }
 .title{
@@ -115,7 +117,9 @@ form.sign-up-form{
     margin: 10px 0;
     transition: .4;
 }
-
+.btn-email{
+    width: 250px;
+}
 .btn:hover{
     background-color: rgba(138, 68, 35, 0.952) ;
 
@@ -236,9 +240,18 @@ form.sign-up-form{
     left: 25%;
 }
 
-.container.sign-up-mode .panels-container .left-panel{
+.container.sign-up-mode .left-panel{
 pointer-events: none;
 }
-.container.sign-up-mode .panels-container .right-panel{
+.container.sign-up-mode .right-panel{
     pointer-events: all;
-    }
+}
+
+.container.sign-up-mode form.sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+.container.sign-up-mode form.sign-up-form{
+    z-index: 2;
+    opacity: 1;
+}
