@@ -159,7 +159,7 @@ while($row = mysqli_fetch_array($query_run)){
   if(mysqli_num_rows($query_run)==1){
     ?>
     <script>
-      location.assign("index2.html");
+      location.assign("home.html");
     </script>
     <?php
   }

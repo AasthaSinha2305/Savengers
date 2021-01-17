@@ -42,7 +42,7 @@ Home
 </head>
 <body style="align-items: center;">
   <div class="sidenav navigation">
-    <header>CCMI</header>
+    <header class="toggle" onclick="toggleMenu()">CCMI  </header>
     <ul>
       
       <li> 
@@ -67,22 +67,22 @@ Home
     </ul>
   </div>
   <div>
-<div class="header"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
+<div class="header" style="margin-left: 60px;"><img src="https://www.ritiriwaz.com/wp-content/uploads/2017/01/Indian-Emblem.jpg" alt="National Embelem" height="100px" width="100px" align="middle">
 <h1 style="color: 3f1f09">COURT CASE MANAGEMENT OF INDIA</h1></div>  
-<div class="topnav" id="myTopnav">
+<!-- <div class="topnav" id="myTopnav">
   <a href="#home" class="active">Home</a>
   <a href="html/efiling.html">E-Filling Guide</a>
   <a href="html/contactus.html">Contact Us</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
-</div>
+</div> -->
 
 
   
  
 
-<div style=" align-items: center;">
+<div style=" align-items: center; margin-left: 60px;">
 <div class="material">
   <p>The Judiciary is a system of courts which interpret and apply the law. The role of the courts is to decide cases by determining the relevant facts and the relevant law, and applying the relevant facts to the relevant law. The Indian Judiciary administers a common law system in which customs, securities and legislation, all codify the law of the land. It has, in fact, inherited the legacy of the legal system established by the then colonial powers and the princely states since the mid-19th century, and has partly retained the characteristics of practices from the ancient[3] and medieval times</p>
 </div>
@@ -99,6 +99,12 @@ Home
 </div>
 </div>
 <script>
+  function toggleMenu(){
+    let sidenav = document.querySelector('.sidenav');
+    let toggle = document.querySelector('.toggle');
+    sidenav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  }
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -124,9 +130,9 @@ function carousel() {
 </script>
 
 </body>
-<footer style="height: 20vh; background-color: #4d270d;">
+<footer style="height: 20vh; background-color: #4d270d; margin-left: 60px;">
 
-    <div class="container">
+    <div class="container ">
       <br>
       <h5 style="color: white;">Contact Us</h5>
       <p style="color: wheat;">
@@ -137,5 +143,7 @@ function carousel() {
     </div>
 
 </footer>
+
 </div>
+
 </html>
