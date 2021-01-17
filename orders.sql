@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Jan 16, 2021 at 05:42 AM
+-- Generation Time: Jan 17, 2021 at 03:44 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -34,21 +34,23 @@ CREATE TABLE `orders` (
   `CASETYPE` varchar(11) NOT NULL,
   `YEARREG` int(11) NOT NULL,
   `PETNAME` varchar(11) NOT NULL,
+  `PETAOR` int(11) NOT NULL,
   `PETADV` varchar(11) NOT NULL,
-  `ORDER DATE` date NOT NULL,
-  `PDF` varchar(200) NOT NULL
+  `ORDERDATE` date NOT NULL,
+  `PDF` varchar(200) NOT NULL,
+  `STATUS` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`SR NO.`, `JUDGENAME`, `CASENO`, `CASETYPE`, `YEARREG`, `PETNAME`, `PETADV`, `ORDER DATE`, `PDF`) VALUES
-(1, 'aastha', 1, 'CR MISC', 2020, 'arika', 'swati', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf'),
-(2, 'aastha', 2, 'CR MISC', 2021, 'sweeta', 'rupa', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf'),
-(3, 'aastha', 3, 'CWJC', 2020, 'anamika', 'sneha', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf'),
-(4, 'akash', 4, 'CWJC', 2020, 'anandi', 'kumari', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf'),
-(5, 'anand', 5, 'CWJC', 2020, 'rupali', 'disha', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf');
+INSERT INTO `orders` (`SR NO.`, `JUDGENAME`, `CASENO`, `CASETYPE`, `YEARREG`, `PETNAME`, `PETAOR`, `PETADV`, `ORDERDATE`, `PDF`, `STATUS`) VALUES
+(1, 'aastha', 1, 'CR MISC', 2020, 'arika', 23, 'swati', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf', 'pending'),
+(2, 'aastha', 2, 'CR MISC', 2021, 'sweeta', 30, 'rupa', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf', 'defective'),
+(3, 'aastha', 3, 'CWJC', 2020, 'anamika', 12, 'sneha', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf', 'pending'),
+(4, 'akash', 4, 'CWJC', 2020, 'anandi', 12, 'kumari', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf', 'defect free'),
+(5, 'anand', 5, 'CWJC', 2020, 'rupali', 45, 'disha', '2021-01-01', 'chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/https://arxiv.org/ftp/arxiv/papers/1704/1704.01614.pdf', 'pending');
 
 --
 -- Indexes for dumped tables

@@ -95,6 +95,11 @@
 </div>
 </body>
 </html>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <?php
@@ -144,7 +149,7 @@ if(isset($_POST['search'])){
             </tr>
             <tr>
                 <th>order date</th>
-                <th><?php echo $row['ORDER DATE'] ?></th>
+                <th><?php echo $row['ORDERDATE'] ?></th>
             </tr>
             <tr>
                 <th>order pdf</th>
