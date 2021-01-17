@@ -140,10 +140,18 @@
   overflow: hidden;
   padding-top: 20px;
 }
-.sidenav:hover{
+
+.sidenav.active{
   width: 300px;
 
 }
+@media screen and (min-width: 600px) {
+  .sidenav:hover
+  {
+    width: 300px;
+  }
+}
+
 .sidenav header{
 color: white;
 font-size: 24px;
@@ -206,6 +214,18 @@ font-size: 20px;
   text-align: center;
   white-space: nowrap;
 }
+
+
+
+.toggle{
+
+  cursor: pointer;
+}
+
+/* .toggle.active:before{
+  content: '\f00d'
+} */
+
 /* 
 .sidenav ul a {
   padding: 6px 8px 6px 16px;
