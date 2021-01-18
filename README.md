@@ -28,5 +28,12 @@ https://drive.google.com/file/d/1cVZf4ypzmJ3BHwUX5lcEoKSNXJy1yADC/view
 ### YOUTUBE LINK (video explanation)
 https://youtu.be/b4gJ2emUZGg
 
+### DETAILS FOR DATABASE CHECKING
+*  GO TO (CAUSE LIST)--> (COURT NUMBER WISE) -->ENTER (2020-01-01)---> ENTER COURT NUMBER 1 ---->  RESULT
+*  GO TO (ORDER LIST)--> (JUDGE NAME WISE) --> ENTER ( The justice Aastha )---> RESULT
+*  GO TO (CASE STATUS)--> (CASE NUMBER WISE) --> ENTER (CASE NUMBER 1)----> (YEAR 2020) ---> RESULT
+
+### MADE BY TEAM SAVENGERS
+
 
 
